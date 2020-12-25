@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level1_toko.unity
     guid: 05bb1dd137df6294a874718012bbdd8d
+  - enabled: 1
+    path: Assets/Scenes/level1_rakit.unity
+    guid: 777856ac9165f774ab2738055fb9c078
   m_configObjects: {}
