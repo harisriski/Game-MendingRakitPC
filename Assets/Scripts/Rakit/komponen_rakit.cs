@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class komponen_rakit : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class komponen_rakit : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     GameObject foto_komponen;
     manager_rakit manager;
 
+    public string nama;
+    public string deskripsi;
     public bool mobo;
     public bool processor;
     public bool graphic_card;
@@ -66,26 +68,23 @@ public class komponen_rakit : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
             if(manager.mobo_terpasang == null)
             {
                 manager.mobo_terpasang = Instantiate(Resources.Load("mobo") as GameObject);
-                manager.mobo_terpilih = null;
                 manager.area_mobo.SetActive(false);
                 manager.komponen_terpilih.SetActive(false);
             }
-        }
-        else
-        {
-            if (manager.slot_terpilih != null)
+            else
             {
-                if (!manager.slot_terpilih.GetComponent<slot_komponen_rakit>().terpasang)
+                if (manager.slot_terpilih != null)
                 {
+                    if (manager.slot_terpilih.GetComponent<slot_komponen_rakit>().komponen == null)
+                    {
 
-                    manager.slot_terpilih.GetComponent<slot_komponen_rakit>().terpasang = true;
-                    manager.slot_terpilih.transform.GetChild(0).gameObject.SetActive(true);
-                    manager.komponen_terpilih.SetActive(false);
+                        manager.slot_terpilih.GetComponent<slot_komponen_rakit>().komponen = manager.komponen_terpilih;
+                        manager.slot_terpilih.transform.GetChild(0).gameObject.SetActive(true);
+                        manager.komponen_terpilih.SetActive(false);
+                    }
                 }
             }
         }
-
-
 
         manager.komponen_terpilih = null;
         Destroy(foto_komponen);
@@ -93,8 +92,22 @@ public class komponen_rakit : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         //Implement your funtionlity here
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        manager.panel_deskripsi.GetComponent<deskripsi_rakit>().set_deskripsi(this);
+        Debug.Log("Mouse enter");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        manager.panel_deskripsi.GetComponent<deskripsi_rakit>().set_deskripsi();
+        Debug.Log("Mouse exit");
+    }
+
     public void setKategori(komponen_toko komponen)
     {
+        nama = komponen.nama;
+        deskripsi = komponen.deskripsi;
         mobo = komponen.mobo;
         processor = komponen.processor;
         graphic_card = komponen.graphic_card;

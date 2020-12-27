@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level1_rakit.unity
     guid: 777856ac9165f774ab2738055fb9c078
+  - enabled: 1
+    path: Assets/Scenes/level1_selesai.unity
+    guid: 887efe56b51b64344ab475f6daae3957
   m_configObjects: {}

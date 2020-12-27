@@ -7,6 +7,8 @@ using TMPro;
 
 public class komponen_toko : MonoBehaviour
 {
+
+    public GameObject komponen_asli;
     public Image foto;
     public int harga;
     public string nama;

@@ -7,9 +7,9 @@ public class slot_komponen_rakit : MonoBehaviour
     Color highlight_color = new Color(1, 0.7960784f, 0.5215687f,1);
     Color normal_color;
     SpriteRenderer sprite;
-    public bool terpasang;
     manager_rakit manager;
     public bool hardisk;
+    public GameObject komponen;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class slot_komponen_rakit : MonoBehaviour
     private void OnMouseEnter()
     {
         manager.slot_terpilih = gameObject;
-        if(!terpasang)
+        if(komponen == null)
         {
             if (hardisk)
             {
@@ -38,6 +38,7 @@ public class slot_komponen_rakit : MonoBehaviour
             {
                 sprite.color = highlight_color;
             }
+            
         }
         else
         {
@@ -47,6 +48,11 @@ public class slot_komponen_rakit : MonoBehaviour
         Debug.Log("masuk ke " + gameObject.name);
     }
 
+    private void OnMouseOver()
+    {
+        manager.panel_deskripsi.GetComponent<deskripsi_rakit>().set_deskripsi(this);
+    }
+
     private void OnMouseExit()
     {
         if(manager.slot_terpilih != null)
@@ -54,6 +60,8 @@ public class slot_komponen_rakit : MonoBehaviour
             manager.slot_terpilih = null;
         }
         sprite.color = normal_color;
+        manager.panel_deskripsi.GetComponent<deskripsi_rakit>().set_deskripsi();
+
         Debug.Log("keluar dari " + gameObject.name);
     }
 }
