@@ -32,7 +32,7 @@ public class komponen_toko_deskripsi : MonoBehaviour
     {
         foto_komponen.gameObject.SetActive(true);
         text_harga.gameObject.SetActive(true);
-        text_nama.gameObject.SetActive(true);
+        //text_nama.gameObject.SetActive(true);
         text_deskripsi.gameObject.SetActive(true);
 
         if(beli)
@@ -47,9 +47,10 @@ public class komponen_toko_deskripsi : MonoBehaviour
         }
         foto_komponen.rectTransform.sizeDelta = komponen.foto.rectTransform.sizeDelta;
         foto_komponen.sprite = komponen.foto.sprite;
-        text_harga.SetText("Harga : \n" + "Rp " + komponen.harga.ToString());
-        text_nama.SetText("Nama : \n" + komponen.nama);
-        text_deskripsi.SetText("Deskripsi : \n" + komponen.deskripsi);
+        text_harga.SetText("Harga : " + komponen.harga.ToString() + "$");
+        //text_nama.SetText("Nama : \n" + komponen.nama);
+        text_nama.SetText("");
+        text_deskripsi.SetText(komponen.deskripsi);
     }
 
     public void setDeskripsi()
@@ -71,14 +72,17 @@ public class komponen_toko_deskripsi : MonoBehaviour
         terpilih.GetComponent<komponen_toko>().komponen_asli = manager.komponen_terpilih;
         terpilih.GetComponent<komponen_toko>().beli = false;
         manager.komponen_terpilih.gameObject.SetActive(false);
+        manager.tambah_biaya(terpilih.GetComponent<komponen_toko>().harga);
         setDeskripsi();
     }
 
     public void batal()
     {
-        GameObject.FindGameObjectWithTag("TokoGameManager").GetComponent<komponen_toko_manager>().komponen_terpilih.GetComponent<komponen_toko>().komponen_asli.gameObject.SetActive(true);
-        GameObject.FindGameObjectWithTag("TokoGameManager").GetComponent<komponen_toko_manager>().komponen_terpilih.GetComponent<komponen_toko>().komponen_asli = null;
-        Destroy(GameObject.FindGameObjectWithTag("TokoGameManager").GetComponent<komponen_toko_manager>().komponen_terpilih);
+        komponen_toko_manager manager = GameObject.FindGameObjectWithTag("TokoGameManager").GetComponent<komponen_toko_manager>();
+        manager.komponen_terpilih.GetComponent<komponen_toko>().komponen_asli.gameObject.SetActive(true);
+        manager.komponen_terpilih.GetComponent<komponen_toko>().komponen_asli = null;
+        manager.kurangi_biaya(manager.komponen_terpilih.GetComponent<komponen_toko>().harga);
+        Destroy(manager.komponen_terpilih);
         setDeskripsi();
     }
 }

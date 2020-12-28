@@ -29,7 +29,7 @@ public class komponen_toko : MonoBehaviour
     void Start()
     {
         foto = transform.GetChild(0).GetComponent<Image>();
-        transform.GetChild(1).GetComponent<TextMeshProUGUI>().SetText("Rp " + harga.ToString());
+        transform.GetChild(1).GetComponent<TextMeshProUGUI>().SetText(harga.ToString() + "$");
     }
 
     // Update is called once per frame

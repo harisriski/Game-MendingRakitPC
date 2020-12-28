@@ -17,4 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level1_selesai.unity
     guid: 887efe56b51b64344ab475f6daae3957
+  - enabled: 1
+    path: Assets/Scenes/level2_toko.unity
+    guid: af08ee9741dbe4846bb563c2c6e9c2f0
+  - enabled: 1
+    path: Assets/Scenes/level2_rakit.unity
+    guid: 7bf5a724f14d6694baed7b5eaab80d81
+  - enabled: 1
+    path: Assets/Scenes/level2_selesai.unity
+    guid: 934616315f1fa2943886b35a59424372
+  - enabled: 1
+    path: Assets/Scenes/level3_toko.unity
+    guid: da0f1c59c3643c7438ed21f3a4742054
+  - enabled: 1
+    path: Assets/Scenes/level3_rakit.unity
+    guid: 717b9d3f99462254f9dfd487f2e40ce5
+  - enabled: 1
+    path: Assets/Scenes/level3_selesai.unity
+    guid: 33d734530d781e340aea838ea058d9e4
   m_configObjects: {}

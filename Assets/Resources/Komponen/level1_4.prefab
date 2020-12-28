@@ -132,10 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79eb9dcbdc64c7e4e96797b6b393a6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  komponen_asli: {fileID: 0}
   foto: {fileID: 0}
-  harga: 0
+  harga: 50
   nama: RAM
-  deskripsi: uugugugu
+  deskripsi: RAM, Random Access Memory dengan kapasitas 4 GB
   beli: 1
   mobo: 0
   processor: 0

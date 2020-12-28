@@ -2510,6 +2510,10 @@ MonoBehaviour:
   level: 1
   komponen_terpilih: {fileID: 0}
   panel_deskripsi: {fileID: 472738635}
+  total_anggaran: 500
+  total_biaya: 0
+  text_anggaran: {fileID: 893299475}
+  text_total_biaya: {fileID: 1922439860}
 --- !u!1 &1139444059
 GameObject:
   m_ObjectHideFlags: 0
