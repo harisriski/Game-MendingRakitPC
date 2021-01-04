@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level2_toko.unity
     guid: af08ee9741dbe4846bb563c2c6e9c2f0
   - enabled: 1
+    path: Assets/Scenes/level2_cari_anggaran.unity
+    guid: 66b724b49ad9052448a53ff808a1fd43
+  - enabled: 1
     path: Assets/Scenes/level2_rakit.unity
     guid: 7bf5a724f14d6694baed7b5eaab80d81
   - enabled: 1
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level3_toko.unity
     guid: da0f1c59c3643c7438ed21f3a4742054
+  - enabled: 1
+    path: Assets/Scenes/level3_cari_anggaran.unity
+    guid: 9ef8b49cb0a23034a98ce3eae1cee293
   - enabled: 1
     path: Assets/Scenes/level3_rakit.unity
     guid: 717b9d3f99462254f9dfd487f2e40ce5

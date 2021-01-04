@@ -9,6 +9,9 @@ TagManager:
   - AreaMobo
   - Canvas
   - SelesaiGameManager
+  - MiniGameManager
+  - Coin
+  - Obstacle
   layers:
   - Default
   - TransparentFX

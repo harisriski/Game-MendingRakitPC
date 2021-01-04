@@ -64,6 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level2\karakter_level_2_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level2\lantai_level_2_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level2\level_2_mini_game_manager.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level2\object_level_2_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level2\selesai_level_2_mini_game.cs" />
     <Compile Include="Assets\Scripts\Rakit\deskripsi_rakit.cs" />
     <Compile Include="Assets\Scripts\Rakit\kamera_rakit.cs" />
     <Compile Include="Assets\Scripts\Rakit\komponen_rakit.cs" />

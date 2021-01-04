@@ -11,7 +11,10 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(PlayerPrefs.GetInt("level2_terbuka") == 1)
+        PlayerPrefs.SetInt("level_2_cari_uang", 0);
+        PlayerPrefs.SetInt("level_3_cari_uang", 0);
+
+        if (PlayerPrefs.GetInt("level2_terbuka") == 1)
         {
             level2.interactable = true;
         }
