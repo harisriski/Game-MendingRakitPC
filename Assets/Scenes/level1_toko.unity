@@ -2466,6 +2466,7 @@ MonoBehaviour:
   text_anggaran: {fileID: 2112053499}
   text_total_biaya: {fileID: 137148238}
   anggaran_tidak_cukup: {fileID: 1289318092}
+  tombol_cari_anggaran: {fileID: 0}
 --- !u!1 &1156734062
 GameObject:
   m_ObjectHideFlags: 0

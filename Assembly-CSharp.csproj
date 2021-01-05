@@ -69,6 +69,10 @@
     <Compile Include="Assets\Scripts\MiniGame\Level2\level_2_mini_game_manager.cs" />
     <Compile Include="Assets\Scripts\MiniGame\Level2\object_level_2_mini_game.cs" />
     <Compile Include="Assets\Scripts\MiniGame\Level2\selesai_level_2_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level3\manager_level_3_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level3\obstacle_level_3_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level3\player_level_3_mini_game.cs" />
+    <Compile Include="Assets\Scripts\MiniGame\Level3\selesai_level_3_mini_game.cs" />
     <Compile Include="Assets\Scripts\Rakit\deskripsi_rakit.cs" />
     <Compile Include="Assets\Scripts\Rakit\kamera_rakit.cs" />
     <Compile Include="Assets\Scripts\Rakit\komponen_rakit.cs" />

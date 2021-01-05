@@ -93,7 +93,7 @@ public class komponen_toko_manager : MonoBehaviour
     {
         total_anggaran = anggaran;
         total_biaya = biaya;
-        text_anggaran.SetText("Total Anggaran : " + total_anggaran + "$");
+        text_anggaran.SetText("Anggaran : " + total_anggaran + "$");
         text_total_biaya.SetText("Total Biaya : " + total_biaya + "$");
         if(total_biaya <= total_anggaran)
         {
